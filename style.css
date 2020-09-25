@@ -10,16 +10,37 @@ body{
     background-color: rgb(228, 66, 66);
     width: 50%;
     height: 50vw;
-    border-radius: 10%;
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: auto 15% 15% 15% 15% 15%;
+    position: relative;
+    
 }
 
 #wynik{
     background-color: grey;
-    grid-area: 1/1/1/6;
-    border-top-left-radius:10% ;
-    margin: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25%;
+}
+
+#klawiatura{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 25%;
     
+}
+
+.guzik{
+    font-size: 2rem;
+    padding:auto;
+    font-family: 'Ranchers', cursive;
+    border: 3px solid black;
 }
