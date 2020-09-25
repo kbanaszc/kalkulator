@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(187, 187, 187);
+    display:grid;
+    justify-items: center;
+    align-items: center;
+
+}
+
+#Kalkulator{
+    background-color: rgb(228, 66, 66);
+    width: 50%;
+    height: 50vw;
+    border-radius: 10%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto 15% 15% 15% 15% 15%;
+}
+
+#wynik{
+    background-color: grey;
+    grid-area: 1/1/1/6;
+    border-top-left-radius:10% ;
+    margin: 10px;
+    
+}
