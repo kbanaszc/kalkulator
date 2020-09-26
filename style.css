@@ -1,46 +1,56 @@
-body{
-    background-color: rgb(187, 187, 187);
-    display:grid;
-    justify-items: center;
-    align-items: center;
-
+body {
+  background-color: rgb(187, 187, 187);
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
 
-#Kalkulator{
-    background-color: rgb(228, 66, 66);
-    width: 50%;
-    height: 50vw;
-    display: grid;
-    position: relative;
-    
+#Kalkulator {
+  background-color: black;
+  width: 50vw;
+  height: 50vw;
+  display: grid;
+  position: relative;
 }
 
-#wynik{
-    background-color: grey;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 25%;
+#wynik {
+  background-color: grey;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25%;
 }
 
-#klawiatura{
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 25%;
-    
+#klawiatura {
+  background-color: black;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  position: absolute;
+  column-gap: 2px;
+  row-gap: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 25%;
 }
 
-.guzik{
-    font-size: 2rem;
-    padding:auto;
-    font-family: 'Ranchers', cursive;
-    border: 3px solid black;
+.guzik {
+  display: flex;
+  font-size: 2rem;
+  padding: auto;
+  font-family: "Ranchers", cursive;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(248, 47, 47);
+  cursor: pointer;
+}
+
+#eq {
+  grid-area: 4/4/6/5;
 }
