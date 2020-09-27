@@ -1,8 +1,5 @@
-// document.getElementById("1").addEventListener("click", () => {
-//   console.log("1");
-// });
-
 let klaw = document.getElementById("klawiatura");
+let wynik = document.getElementById("wynik");
 
 let arr = [
   "C",
@@ -20,19 +17,30 @@ let arr = [
   "1",
   "2",
   "3",
-  "eq",
+  "=",
   "%",
   "0",
   ",",
 ];
 
 for (y in arr) {
-  klaw.innerHTML(
-    '<div class="guzik" id=' +
-    arr[y] +
-    "value = " +
-    arr[y] +
-    ">" +
-    arr[y] +
-    "</div>")
+  klaw.insertAdjacentHTML(
+    "beforeend",
+    `<div class="guzik" id=guzik${y} value =${arr[y]} onclick="but(this)">${arr[y]}</div>`
+  );
+}
+
+let tablica = "";
+
+function but(x) {
+  if (tablica.length < 18) {
+    let dana = x.getAttribute("value");
+    console.log(dana);
+
+    if (dana === "del") tablica=tablica.slice(0, -1);
+    else {
+      tablica = tablica + dana;
+    }
+    wynik.innerHTML = tablica;
+  }
 }

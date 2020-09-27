@@ -3,6 +3,8 @@ body {
   display: grid;
   justify-items: center;
   align-items: center;
+  font-family: "Ranchers", cursive;
+  font-size: 2rem;
 }
 
 #Kalkulator {
@@ -11,6 +13,8 @@ body {
   height: 50vw;
   display: grid;
   position: relative;
+  border-bottom: black solid 7px;
+  border-right: black solid 6px;
 }
 
 #wynik {
@@ -20,6 +24,9 @@ body {
   left: 0;
   right: 0;
   height: 25%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
 
 #klawiatura {
@@ -40,9 +47,7 @@ body {
 
 .guzik {
   display: flex;
-  font-size: 2rem;
   padding: auto;
-  font-family: "Ranchers", cursive;
   height: 100%;
   width: 100%;
   justify-content: center;
@@ -51,6 +56,6 @@ body {
   cursor: pointer;
 }
 
-#eq {
+#guzik15 {
   grid-area: 4/4/6/5;
 }
