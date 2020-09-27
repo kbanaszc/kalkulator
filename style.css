@@ -4,7 +4,7 @@ body {
   justify-items: center;
   align-items: center;
   font-family: "Ranchers", cursive;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 #Kalkulator {
@@ -27,6 +27,7 @@ body {
   display: flex;
   justify-content: right;
   align-items: center;
+  font-size: 1em;
 }
 
 #klawiatura {
