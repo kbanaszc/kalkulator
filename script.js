@@ -20,7 +20,7 @@ let arr = [
   "=",
   "%",
   "0",
-  ",",
+  ".",
 ];
 
 for (y in arr) {
@@ -32,24 +32,50 @@ for (y in arr) {
 
 let tablica = "";
 let holder = "";
+let flaga = 0;
+let czysc = 0;
 
 function but(x) {
   let dana = x.getAttribute("value");
+  if (czysc === 1) {
+    tablica = "";
+    czysc = 0;
+  }
   if (tablica.length < 13) {
     console.log(dana);
 
     if (dana === "del") {
       tablica = tablica.slice(0, -1);
-    } else if (dana === "-") {
+    } else if (dana === "-" || dana === "+" || dana === "/" || dana === "x") {
       if (holder === "") {
         holder = tablica;
         tablica = "";
-      } else {
-        holder = holder - tablica;
+      } else if (dana === "-") {
+        holder = parseFloat(holder) - parseFloat(tablica);
         tablica = "";
+        flaga = "-";
+      } else if (dana === "/") {
+        holder = parseFloat(holder) / parseFloat(tablica);
+        tablica = "";
+        flaga = "/";
+      } else if (dana === "x") {
+        holder = parseFloat(holder) * parseFloat(tablica);
+        tablica = "";
+        flaga = "x";
+      } else if (dana === "+") {
+        holder = parseFloat(holder) + parseFloat(tablica);
+        tablica = "";
+        flaga = "+";
       }
     } else if (dana === "=") {
-      tablica = holder
+      if(flaga!=""){
+        if(flaga==="-") holder = parseFloat(holder) - parseFloat(tablica);
+        if(flaga==="+") holder = parseFloat(holder) + parseFloat(tablica);
+        if(flaga==="*") holder = parseFloat(holder) * parseFloat(tablica);
+        if(flaga==="/") holder = parseFloat(holder) / parseFloat(tablica);
+      }
+      tablica = holder.toString();
+      czysc = 1;
     } else if (dana === "C") {
       tablica = "";
       holder = "";
